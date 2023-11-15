@@ -1,0 +1,16 @@
+.h {
+  width: 2px;
+  height: 100vh;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: black;
+}
+.w {
+  width: 100vw;
+  height: 2px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: black;
+}
