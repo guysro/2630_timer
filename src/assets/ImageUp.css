@@ -1,0 +1,22 @@
+.imgIn {
+  font-size: 1.2rem;
+  padding: 5px;
+  position: absolute;
+  left: 100%;
+  top: 0;
+  transform: translateX(-50%);
+  text-wrap: nowrap;
+  margin-top: 5px;
+  border-radius: 20px;
+  background-color: #eeeeee;
+  border: 2px solid black;
+  transition: all 0.1s;
+  z-index: 1;
+}
+.imgIn:hover {
+  cursor: pointer;
+  background-color: #cccccc;
+}
+input[type="file"] {
+  display: none;
+}
