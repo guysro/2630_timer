@@ -10,7 +10,7 @@ function Timer() {
   useEffect(() => {
     const interval = setInterval(() => {
       setOut(timeDiff(new Date(dateIn + " " + timeIn), new Date()));
-      setShouldRender(out != "NaN : NaN : NaN : NaN" && out != null);
+      setShouldRender(out !== "NaN : NaN : NaN : NaN" && out != null);
     }, 1000);
 
     return () => clearInterval(interval);

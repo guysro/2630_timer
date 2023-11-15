@@ -1,13 +1,16 @@
 import React from "react";
+import ImageUploader from "./ImageUploader";
 
 function DailyMeme() {
   return (
-    <img
-      alt="no meme :("
-      src=""
-      width={"100%"}
-      height={"100%"}
-    />
+    <div style={{ width: "50vw", height: "50vh", position: "relative" }}>
+      <ImageUploader />
+      {/* <img
+        alt="no meme :("
+        src="./ground.jpg"
+        style={{ height: "50vh", width: "50vw", top: 0, left: 0, zIndex: 1 }}
+      /> */}
+    </div>
   );
 }
 

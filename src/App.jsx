@@ -1,14 +1,14 @@
 import React from "react";
 import Timer from "./assets/Timer";
 import SepLines from "./assets/SepLines";
-import DailyMeme from "./assets/DailyMeme";
 import "./App.css";
+import ImageUploader from "./assets/ImageUploader";
 
 function App() {
   return (
     <div className="back">
       <div style={{ width: "50vw", height: "50vh", fontSize: "3rem" }}>
-        <DailyMeme></DailyMeme>
+        <ImageUploader></ImageUploader>
       </div>
       <Timer />
       <Timer />
