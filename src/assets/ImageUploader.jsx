@@ -3,7 +3,7 @@ import "./ImageUp.css";
 
 const ImageUploader = () => {
   const [selectedImage, setSelectedImage] = useState(null);
-  const [op, setOp] = useState("add meme");
+  const [op, setOp] = useState("Add Meme");
 
   const handleImageChange = (event) => {
     const file = event.target.files[0];
