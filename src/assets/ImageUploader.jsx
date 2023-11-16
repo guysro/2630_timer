@@ -3,13 +3,15 @@ import "./ImageUp.css";
 
 const ImageUploader = () => {
   const [selectedImage, setSelectedImage] = useState(null);
+  const [op, setOp] = useState("add meme");
 
   const handleImageChange = (event) => {
     const file = event.target.files[0];
 
     if (file) {
-      const reader = new FileReader();
+      setOp("");
 
+      const reader = new FileReader();
       reader.onloadend = () => {
         setSelectedImage(reader.result);
       };
@@ -19,12 +21,12 @@ const ImageUploader = () => {
   };
 
   return (
-    <div style={{ position: "absolute", width: "50vw", height: "50vh" }}>
+    <div>
       <label
         htmlFor="imgIn"
         className="imgIn"
       >
-        change meme
+        {op}
       </label>
       <input
         name="imgIn"
@@ -34,11 +36,11 @@ const ImageUploader = () => {
         onChange={handleImageChange}
       />
       {
-        <div>
+        <div style={{ margin: 0, width: "50vw", height: "50vh" }}>
           <img
             src={selectedImage}
-            alt="Please select meme"
-            style={{ width: "50vw", height: "50vh" }}
+            alt=""
+            style={{ position: "absolute", width: "50vw", height: "50vh", border: "none", margin: 0 }}
           />
         </div>
       }

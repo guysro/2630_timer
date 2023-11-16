@@ -22,23 +22,23 @@ body {
 }
 .output {
   align-self: center;
-  font-size: 5rem;
+  font-size: 4vw;
   margin: 0;
-  margin-top: 75px;
-  word-spacing: 30px;
+  margin-top: 10vh;
+  word-spacing: 4vw;
 }
 .timeCont {
-  font-size: 0.8rem;
+  font-size: 1vw;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   align-self: center;
-  word-spacing: 60px;
+  word-spacing: 3vw;
 }
 .timeUnit {
   text-align: center;
-  margin-bottom: 15vh;
+  margin-bottom: 5vh;
 }
 .in:hover {
   cursor: pointer;
