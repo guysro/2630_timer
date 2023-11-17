@@ -40,7 +40,7 @@ const ImageUploader = () => {
           <img
             src={selectedImage}
             alt=""
-            style={{ position: "absolute", width: "50vw", height: "50vh", border: "none", margin: 0 }}
+            style={{ position: "absolute", width: "50vw", height: "50vh", border: "none", margin: 0, padding: 0 }}
           />
         </div>
       }

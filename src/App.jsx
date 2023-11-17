@@ -3,6 +3,7 @@ import Timer from "./assets/Timer";
 import SepLines from "./assets/SepLines";
 import "./App.css";
 import ImageUploader from "./assets/ImageUploader";
+import Clock from "./assets/Clock";
 
 function App() {
   return (
@@ -11,7 +12,7 @@ function App() {
         <ImageUploader></ImageUploader>
       </div>
       <Timer />
-      <Timer />
+      <Clock />
       <Timer />
       <SepLines></SepLines>
     </div>
