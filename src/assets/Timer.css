@@ -39,7 +39,7 @@ body {
   align-self: center;
   font-size: 4vw;
   margin: 0;
-  word-spacing: 3vw;
+  word-spacing: 2.8vw;
 }
 .timeCont {
   font-size: 1vw;
@@ -48,7 +48,7 @@ body {
   align-items: center;
   justify-content: center;
   align-self: center;
-  word-spacing: 3vw;
+  word-spacing: 4vw;
 }
 .timeUnit {
   text-align: center;

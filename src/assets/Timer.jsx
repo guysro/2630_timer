@@ -2,6 +2,9 @@ import React, { useEffect, useState } from "react";
 import "./Timer.css";
 import TitleDia from "./TitleDia";
 
+const padNum = (num) => {
+  return num < 10 ? "0" + num : num;
+};
 function Timer() {
   const [out, setOut] = useState("NaN : NaN : NaN : NaN");
   const [dateIn, setDate] = useState("");
@@ -34,12 +37,15 @@ function Timer() {
       <div className="timeCont">
         <h1 className="title">{title}</h1>
         <h1 className="output">{shouldRender ? out : null}</h1>
-        <h1
-          style={{ display: shouldRender ? "block" : "none" }}
+        <div
+          style={{ display: shouldRender ? "flex" : "none", gap: "8vw", marginTop: "-1vw" }}
           className="timeUnit"
         >
-          {"days | hours | minutes | sec"}
-        </h1>
+          <h2 style={{ marginLeft: "1vw" }}>days</h2>
+          <h2 style={{ marginLeft: "2vw" }}>hours</h2>
+          <h2 style={{ marginLeft: "1.5vw" }}>mins</h2>
+          <h2>seconds</h2>
+        </div>
       </div>
       <div className="inputCont">
         <input
@@ -85,7 +91,7 @@ function dhm(ms) {
   const minutes = Math.floor(hoursms / (60 * 1000));
   const minutesms = ms % (60 * 1000);
   const sec = Math.floor(minutesms / 1000);
-  out = days + " : " + hours + " : " + minutes + " : " + sec;
+  out = padNum(days) + " : " + padNum(hours) + " : " + padNum(minutes) + " : " + padNum(sec);
   return sec >= 0 ? out : null;
 }
 
