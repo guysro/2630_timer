@@ -4,6 +4,7 @@ import SepLines from "./assets/SepLines";
 import "./App.css";
 import ImageUploader from "./assets/ImageUploader";
 import Clock from "./assets/Clock";
+import { defaults } from "./assets/defaults";
 
 function App() {
   return (
@@ -11,9 +12,9 @@ function App() {
       <div style={{ width: "50vw", height: "50vh", fontSize: "3rem" }}>
         <ImageUploader></ImageUploader>
       </div>
-      <Timer />
+      <Timer defaultDate={defaults.kickoff} />
       <Clock />
-      <Timer />
+      <Timer defaultDate={defaults.eliBday} />
       <SepLines></SepLines>
     </div>
   );

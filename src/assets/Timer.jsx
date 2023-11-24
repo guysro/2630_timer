@@ -5,13 +5,15 @@ import TitleDia from "./TitleDia";
 const padNum = (num) => {
   return num < 10 ? "0" + num : num;
 };
-function Timer() {
+function Timer({ defaultDate }) {
   const [out, setOut] = useState("NaN : NaN : NaN : NaN");
   const [dateIn, setDate] = useState("");
   const [timeIn, setTime] = useState("");
   const [title, setTitle] = useState("");
   const [open, setOpen] = useState(false);
   const [shouldRender, setShouldRender] = useState(false);
+  const defaultD = formatDate(defaultDate.date) + " " + defaultDate.time;
+  const defaultT = defaultDate.title;
 
   const changeOpen = (change) => {
     setOpen(change);
@@ -25,8 +27,16 @@ function Timer() {
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setOut(timeDiff(new Date(dateIn + " " + timeIn), new Date()));
-      setShouldRender(out !== "NaN : NaN : NaN : NaN" && out != null);
+      var diff = timeDiff(new Date(dateIn + " " + timeIn), new Date());
+      if (diff !== "NaN : NaN : NaN : NaN" && diff != null) {
+        setOut(diff);
+        setShouldRender(out !== "NaN : NaN : NaN : NaN" && out != null);
+      } else {
+        setOut(timeDiff(new Date(defaultD), new Date()));
+        setTitle(defaultT);
+        setShouldRender(true);
+        console.log(defaultD);
+      }
     }, 1000);
 
     return () => clearInterval(interval);
@@ -94,5 +104,10 @@ function dhm(ms) {
   out = padNum(days) + " : " + padNum(hours) + " : " + padNum(minutes) + " : " + padNum(sec);
   return sec >= 0 ? out : null;
 }
+
+const formatDate = (date) => {
+  const d = date.split("/");
+  return d[1] + "/" + d[0] + "/" + d[2];
+};
 
 export default Timer;
