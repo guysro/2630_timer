@@ -1,0 +1,8 @@
+.back {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+body {
+  background-color: #006f3d;
+}

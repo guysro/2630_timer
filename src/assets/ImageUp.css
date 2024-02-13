@@ -1,0 +1,20 @@
+.imgIn {
+  z-index: 1;
+  position: absolute;
+  font-size: 8vw;
+  height: 50vh;
+  text-align: center;
+  width: 50vw;
+  border: none;
+  background-color: #00000000;
+  transition: all 0.1s;
+  line-height: 50vh;
+  padding: 0;
+}
+.imgIn:hover {
+  cursor: pointer;
+  background-color: #00000055;
+}
+input[type="file"] {
+  display: none;
+}
