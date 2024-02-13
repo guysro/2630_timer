@@ -13,7 +13,7 @@ function Clock() {
 
     return () => clearInterval(interval);
   });
-  return <div className="clockCont">{time.getHours() + " : " + padNum(time.getMinutes()) + " : " + padNum(time.getSeconds())}</div>;
+  return <div className="clockCont">{padNum(time.getHours()) + " : " + padNum(time.getMinutes()) + " : " + padNum(time.getSeconds())}</div>;
 }
 
 export default Clock;
